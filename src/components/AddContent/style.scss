@@ -1,0 +1,34 @@
+.add-content {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        text-align: center;
+    }
+
+    input, select {
+        margin-bottom: 1rem;
+        padding: 5px;
+        height: 30px;
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        margin-top: 10px;
+        height: 40px;
+        background-color: #2a80da;
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+
+        &:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+    }
+}

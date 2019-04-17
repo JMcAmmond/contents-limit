@@ -1,0 +1,32 @@
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem 0;
+
+    @media only screen and (min-width : 801px) {
+        flex-direction: row;
+        padding: 3rem 0;
+    }
+
+    > section {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 50px;
+
+        @media only screen and (min-width : 801px) {
+            flex: 1;
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    > aside {
+        flex: 1;
+
+        @media only screen and (min-width : 801px) {
+            flex: 0 300px;
+        }
+    }
+}
