@@ -32,8 +32,8 @@ class ListContent extends Component {
         return lists;
     }
 
-	render() {
-		let sortedItems = {};
+    render() {
+        let sortedItems = {};
         let listTotal = 0;
 
         /**
@@ -54,32 +54,32 @@ class ListContent extends Component {
 
             //Keep track of the total value of all the items
             listTotal = listTotal + parseFloat(item.value);
-		});
-		
-		return (
-			<div className="list-content">
+        });
+        
+        return (
+            <div className="list-content">
                 {/**
-                  * There are items to display
-                  */}
-				{this.props.items.length > 0 && (
-					<div className="box">
-						<span className="list-content__items-total">All Items Total: ${listTotal}</span>
-						{this.renderCategories(sortedItems)}
-					</div>
-				)}
+                    * There are items to display
+                    */}
+                {this.props.items.length > 0 && (
+                    <div className="box">
+                        <span className="list-content__items-total">All Items Total: ${listTotal}</span>
+                        {this.renderCategories(sortedItems)}
+                    </div>
+                )}
 
                 {/**
-                  * There are no items to display
-                  */}
-				{this.props.items.length === 0 && (
-					<div className="list-content__no-items">
-						<h1>No items available</h1>
-						<p>Start adding some items and they will appear here :)</p>
-					</div>
-				)}
-			</div>
-		)
-	}
+                    * There are no items to display
+                    */}
+                {this.props.items.length === 0 && (
+                    <div className="list-content__no-items">
+                        <h1>No items available</h1>
+                        <p>Start adding some items and they will appear here :)</p>
+                    </div>
+                )}
+            </div>
+        )
+    }
 }
 
 /**
