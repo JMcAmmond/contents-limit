@@ -1,6 +1,8 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
 .add-content {
-    display: flex;
-    flex-direction: column;
+    @include displayFlex();
 
     h3 {
         text-align: center;
@@ -21,7 +23,7 @@
     button {
         margin-top: 10px;
         height: 40px;
-        background-color: #2a80da;
+        background-color: $btn-primary;
         border: none;
         color: #ffffff;
         cursor: pointer;

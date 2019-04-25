@@ -1,9 +1,10 @@
+@import '../../scss/mixins.scss';
+
 .contents-by-category {
     padding: 2rem 0 1rem 0;
 
     .contents-by-category__header {
-        display: flex;
-        flex-direction: row;
+        @include displayFlex(row);
         justify-content: space-between;
         border-bottom: 1px solid rgba(0,0,0,0.1);
         color: #666666;
@@ -13,9 +14,8 @@
     }
 
     .contents-by-category__item {
+        @include displayFlex(row);
         font-weight: 100;
-        display: flex;
-        flex-direction: row;
         padding: 1rem 0;
 
         .contents-by-category__item__name {

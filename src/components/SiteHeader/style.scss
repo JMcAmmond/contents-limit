@@ -1,11 +1,12 @@
+@import '../../scss/mixins.scss';
+
 .site-header {
     background: #2e3e50;
     height: 90px;
     color: #ffffff;
 
     .site-header__wrapper {
-        display: flex;
-        flex-direction: row;
+        @include displayFlex(row);
         justify-content: space-between;
         align-items: center;
         max-width: 1000px;
