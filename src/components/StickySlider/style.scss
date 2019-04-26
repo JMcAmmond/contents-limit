@@ -1,33 +1,36 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+$toggleHeight: 50px;
+
 .sticky-slider {
     position: fixed;
     transition: all 0.36s linear 0s;
     bottom: 0;
     width: 100%;
 
-    @media only screen and (min-width : 801px) {
+    @include desktopMedia {
         position: -webkit-sticky;
         position: sticky;
         top: 5px;
     }
 
     &.closed {
-        transform: translateY(calc(100% - 50px));
+        transform: translateY(calc(100% - #{$toggleHeight}));
 
-        @media only screen and (min-width : 801px) {
+        @include desktopMedia {
             transform: translateY(0);
         }
     }
 
     .sticky-slider__toggle {
-        height: 50px;
+        height: $toggleHeight;
         text-align: center;
-        background-color: #4aa57f;
+        background-color: $primary;
         border-top: 1px solid #0003;
         color: #fff;
 
-        @media only screen and (min-width : 801px) {
-            display: none;
-        }
+        @include mediaDisplayNone(801px);
 
         span {
             padding-top: 10px;

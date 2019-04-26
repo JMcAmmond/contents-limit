@@ -1,0 +1,18 @@
+@import './variables.scss';
+
+@mixin mediaDisplayNone($media-min) {
+    @media only screen and (min-width : $media-min) {
+        display: none;
+    }
+}
+
+@mixin desktopMedia() {
+    @media only screen and (min-width : $desktop-media) {
+        @content;
+    }
+}
+
+@mixin displayFlex($flex-direction: column) {
+    display: flex;
+    flex-direction: $flex-direction;
+}
